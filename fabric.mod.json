@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 1,
+    "authors": [
+        "BanditHelps"
+    ],
+    "environment": "*",
+    "id": "prof",
+    "version": "1.0.0",
+    "name": "Professional Heroes",
+    "description": "An addon to teach people Palladium Modding!",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}

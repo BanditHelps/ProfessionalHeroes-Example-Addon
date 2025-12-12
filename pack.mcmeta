@@ -1,0 +1,13 @@
+{
+    "pack": {
+        "id": "prof",
+        "pack_format": 15,
+        "description": "An addon to teach people Palladium Modding!",
+        "version": "1.0.0"
+    },
+    "dependencies": {
+        "common": {},
+        "fabric": {},
+        "forge": {}
+    }
+}

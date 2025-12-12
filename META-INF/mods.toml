@@ -1,0 +1,21 @@
+modLoader="lowcodefml"
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="prof"
+version="1.0.0"
+logoFile = "logo.png"
+logoBlur = false
+displayName="Professional Heroes"
+description='''
+An addon to teach people Palladium Modding!
+'''
+
+[[dependencies.prof]]
+modId = "palladium"
+mandatory = true
+versionRange = ">=4.4.2"
+ordering = "NONE"
+side = "BOTH"
