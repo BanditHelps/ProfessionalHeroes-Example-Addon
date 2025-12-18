@@ -16,6 +16,6 @@ An addon to teach people Palladium Modding!
 [[dependencies.prof]]
 modId = "palladium"
 mandatory = true
-versionRange = ">=4.4.2"
+versionRange = "[4.4.2,)"
 ordering = "NONE"
 side = "BOTH"
