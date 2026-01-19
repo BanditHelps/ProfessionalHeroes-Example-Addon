@@ -2,12 +2,12 @@
     "name": "Electro Guy",
     "persistent_data": true,
     "background": "minecraft:textures/block/cyan_wool.png",
-    "icon": "minecraft:lightning_rod",
+    "icon": "prof:textures/icons/electro_guy.png",
     "gui_display_type": "tree",
     "abilities": {
         "elctro_laser": {
             "type": "palladium:energy_beam",
-            "icon": "minecraft:lightning_rod",
+            "icon": "prof:textures/icons/energy_laser.png",
             "title": "Electro Laser",
             "bar_color": "yellow",
             "list_index": 0,
@@ -43,7 +43,7 @@
         },
         "dual_electro_blast": {
             "type": "palladium:energy_beam",
-            "icon": "minecraft:blaze_rod",
+            "icon": "prof:textures/icons/dual_energy_laser.png",
             "title": "Dual Electro Blast",
             "bar_color": "yellow",
             "list_index": 2,
@@ -75,7 +75,7 @@
         },
         "strike_all": {
             "type": "palladium:command",
-            "icon": "minecraft:iron_ingot",
+            "icon": "minecraft:lightning_rod",
             "title": "Zip Zap",
             "bar_color": "light_gray",
             "hidden": false,
