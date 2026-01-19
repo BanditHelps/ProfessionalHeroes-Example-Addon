@@ -5,38 +5,90 @@
     "icon": "minecraft:lightning_rod",
     "gui_display_type": "tree",
     "abilities": {
-        "test_dummy": {
-            "type": "palladium:dummy",
-            "icon": "minecraft:spruce_door",
-            "title": "Test",
+        "elctro_laser": {
+            "type": "palladium:energy_beam",
+            "icon": "minecraft:lightning_rod",
+            "title": "Electro Laser",
             "bar_color": "yellow",
-            "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": [0, 0],
-            "description": "This is a test of the abilities!",
+            "gui_position": [
+                0,
+                0
+            ],
+            "description": "Shoot out a beam of energy.",
+            "energy_beam": "prof:electro_laser",
+            "damage": 5,
+            "max_distance": 15,
+            "speed": 0.8,
+            "set_on_fire_seconds": 0,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [
+                "setblock ~ ~-1 ~ minecraft:diamond_block"
+            ],
+            "commands_on_entity_hit": [
+                "execute positioned ~ ~ ~ run effect give @e[limit=1,distance=..2] minecraft:glowing 2 0 true"
+            ],
             "conditions": {
                 "enabling": [
                     {
-                        "type": "palladium:action",
+                        "type": "palladium:held",
                         "cooldown": 0,
                         "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
+                        "needs_empty_hand": false
                     }
                 ],
                 "unlocking": []
             }
         },
-        "test_dummy_2": {
-            "type": "palladium:dummy",
-            "icon": "minecraft:spruce_door",
-            "title": "Test 2",
+        "dual_electro_blast": {
+            "type": "palladium:energy_beam",
+            "icon": "minecraft:blaze_rod",
+            "title": "Dual Electro Blast",
             "bar_color": "yellow",
+            "list_index": 2,
+            "gui_position": [0, 1],
+            "description": "Shoot 2 beams out of your hands",
+            "energy_beam": "prof:dual_electro_blast",
+            "damage_type": "null",
+            "damage": 10,
+            "max_distance": 30,
+            "speed": 0.5,
+            "set_on_fire_seconds": 0,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [
+                "summon lightning_bolt ~ ~ ~"
+            ],
+            "commands_on_entity_hit": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "strike_all": {
+            "type": "palladium:command",
+            "icon": "minecraft:iron_ingot",
+            "title": "Zip Zap",
+            "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 5,
-            "gui_position": [0, 1],
-            "description": "This is a test of the abilities!",
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "execute at @s as @e[distance=..5] run summon minecraft:lightning_bolt ~ ~ ~"
+            ],
+            "last_tick_commands": [],
+            "commands": [
+            ],
             "conditions": {
                 "enabling": [
                     {
