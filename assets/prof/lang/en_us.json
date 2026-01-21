@@ -1,3 +1,5 @@
 {
-    "pack.prof.name": "Professional Heroes"
+    "pack.prof.name": "Professional Heroes",
+    "item.prof.detonator": "Detonator",
+    "item.prof.detonator.description": "Hold the detonator in your main hand, to use"
 }

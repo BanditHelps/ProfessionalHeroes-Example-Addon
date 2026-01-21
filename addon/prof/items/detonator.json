@@ -1,0 +1,15 @@
+{
+    "type": "palladium:default",
+    "max_stack_size": 1,
+    "creative_mode_tab": "minecraft:combat",
+    "rarity": "rare",
+    "is_fire_resistant": false,
+    "tooltip": [
+        "A detonator of some sort",
+        {
+            "translate": "item.prof.detonator.description",
+            "color": "#DA0A0A",
+            "underlined": false
+        }
+    ]
+}

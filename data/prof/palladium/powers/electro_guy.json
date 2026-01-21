@@ -5,6 +5,29 @@
     "icon": "prof:textures/icons/electro_guy.png",
     "gui_display_type": "tree",
     "abilities": {
+        "startup": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "tag @s add lightning_proof"
+            ],
+            "last_tick_commands": [
+                "tag @s remove lightning_proof"
+            ],
+            "commands": [
+            ],
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
         "elctro_laser": {
             "type": "palladium:energy_beam",
             "icon": "prof:textures/icons/energy_laser.png",
@@ -72,11 +95,44 @@
                 ],
                 "unlocking": []
             }
-        },
-        "strike_all": {
+        }, 
+        "summon_lightning": {
             "type": "palladium:command",
             "icon": "minecraft:lightning_rod",
-            "title": "Zip Zap",
+            "title": "Summon Lighning",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "Summons a bolt of lightning at the player",
+            "first_tick_commands": [
+            ],
+            "last_tick_commands": [
+            ],
+            "commands": [
+                "summon minecraft:lightning_bolt ^ ^ ^1",
+                "summon minecraft:lightning_bolt ^ ^ ^2",
+                "summon minecraft:lightning_bolt ^ ^ ^3",
+                "summon minecraft:lightning_bolt ^ ^ ^4",
+                "summon minecraft:lightning_bolt ^ ^ ^5"
+            ],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "entity_strike": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "Entity Zap",
             "bar_color": "light_gray",
             "hidden": false,
             "hidden_in_bar": false,
@@ -84,10 +140,11 @@
             "gui_position": "null",
             "description": "null",
             "first_tick_commands": [
-                "execute at @s as @e[distance=..5] run summon minecraft:lightning_bolt ~ ~ ~"
+                "execute positioned as @e[distance=..10,tag=!lightning_proof] run summon minecraft:lightning_bolt ~ ~ ~"
             ],
             "last_tick_commands": [],
             "commands": [
+                
             ],
             "conditions": {
                 "enabling": [
